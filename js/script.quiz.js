@@ -1,6 +1,4 @@
-let animalAnswers = {
 
-};
 
 let dogScore = 0;
 let catScore = 0;
@@ -70,75 +68,81 @@ else {
     alert("Sorry, your browser do not support local storage.");
 } 
 
+//NEW CONSTRUCTOR OBJECT
+
+function StorageObj() {
+    this.ans1 = "";
+    this.ans2 = "";
+    this.ans3 = "";
+  this.ans4 = "";
+  this.ans5 = "";
+  this.ans6 = "";
+  this.ans7 = "";
+  this.ans8 = "";
+  this.ans9 = "";
+  this.ans10 = "";
+    
+}
+var animalAnswers = new StorageObj();
+
 let addInputToObj = () =>{
 
 								for (var i = 0; i < q1.length; i++) {
                 if (q1[i].checked){
-                animalAnswers.q1 = q1[i].value;
+                animalAnswers.ans1 = q1[i].value;
                 }
                     }
                     for (var i = 0; i < q2.length; i++) {
                 if (q2[i].checked){
-                animalAnswers.q2 = q2[i].value;
+                animalAnswers.ans2 = q2[i].value;
                 }
                     }
                     for (var i = 0; i < q3.length; i++) {
                 if (q3[i].checked){
-                animalAnswers.q3 = q3[i].value;
+                animalAnswers.ans3 = q3[i].value;
                 }
                     }
   for (var i = 0; i < q4.length; i++) {
                 if (q4[i].checked){
-                animalAnswers.q4 = q4[i].value;
+                animalAnswers.ans4 = q4[i].value;
                 }
                     }
   for (var i = 0; i < q5.length; i++) {
                 if (q5[i].checked){
-                animalAnswers.q5 = q5[i].value;
+                animalAnswers.ans5 = q5[i].value;
                 }
                     }
   
   for (var i = 0; i < q6.length; i++) {
                 if (q6[i].checked){
-                animalAnswers.q6 = q6[i].value;
+                animalAnswers.ans6 = q6[i].value;
                 }
                     }
   for (var i = 0; i < q7.length; i++) {
                 if (q7[i].checked){
-                animalAnswers.q7 = q7[i].value;
+                animalAnswers.ans7 = q7[i].value;
                 }
                     }
   for (var i = 0; i < q8.length; i++) {
                 if (q8[i].checked){
-                animalAnswers.q8 = q8[i].value;
+                animalAnswers.ans8 = q8[i].value;
                 }
                     }
   for (var i = 0; i < q9.length; i++) {
                 if (q9[i].checked){
-                animalAnswers.q9 = q9[i].value;
+                animalAnswers.ans9 = q9[i].value;
                 }
                     }
   for (var i = 0; i < q10.length; i++) {
                 if (q10[i].checked){
-                animalAnswers.q10 = q10[i].value;
+                animalAnswers.ans10 = q10[i].value;
                 }
                     }
   
                     console.log(animalAnswers);
                     
                     }
-function ShowBox (color, day) {
-this.color = color;
-this.day = day;
-}
 
-let bangbang = () => {
-let Object1 = new ShowBox('blue', 'friday');
-let Object2 = new ShowBox ('yellow','monday');
-
-console.log(Object1);
-console.log(Object2);
-}
 
 let addScores = () => { 
 let gimme = Object.values(animalAnswers);
@@ -321,7 +325,6 @@ console.log(animalAnswers);
 let submitbutton = document.getElementById('submitQ');
 submitbutton.addEventListener('click', addInputToObj);
 submitbutton.addEventListener('click', addScores);
-submitbutton.addEventListener('click', bangbang);
 submitbutton.addEventListener('click', showQuizResults);
 
 let resetbutton = document.getElementById('reset');
