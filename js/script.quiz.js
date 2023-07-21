@@ -127,6 +127,18 @@ let addInputToObj = () =>{
                     console.log(animalAnswers);
                     
                     }
+function ShowBox (color, day) {
+this.color = color;
+this.day = day;
+}
+
+let bangbang = () => {
+let Object1 = new ShowBox('blue', 'friday');
+let Object2 = new ShowBox ('yellow','monday');
+
+console.log(Object1);
+console.log(Object2);
+}
 
 let addScores = () => { 
 let gimme = Object.values(animalAnswers);
@@ -309,6 +321,7 @@ console.log(animalAnswers);
 let submitbutton = document.getElementById('submitQ');
 submitbutton.addEventListener('click', addInputToObj);
 submitbutton.addEventListener('click', addScores);
+submitbutton.addEventListener('click', bangbang);
 submitbutton.addEventListener('click', showQuizResults);
 
 let resetbutton = document.getElementById('reset');
