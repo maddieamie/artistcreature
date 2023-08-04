@@ -52,7 +52,7 @@ let q10Selected = document.querySelector('input[name="question10"]:checked');
    localStorage.setItem('question10', q10Selected.value);
     
     // Retrieve data
-    alert("Hi, " + localStorage.getItem('question1'));
+   localStorage.getItem('question1');
    localStorage.getItem('question2');
   localStorage.getItem('question3');
   localStorage.getItem('question4');
@@ -65,7 +65,7 @@ let q10Selected = document.querySelector('input[name="question10"]:checked');
 } 
 
 else {
-    alert("Sorry, your browser do not support local storage.");
+    console.log("Sorry, your browser do not support local storage.");
 } 
 
 //NEW CONSTRUCTOR OBJECT
